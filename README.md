@@ -6,7 +6,7 @@
 
 ## convert commonJS to esm
 
-- rename extention file .js to .mjs
+- rename extension file .js to .mjs
 - add 'type=module' to top package.json
 - run node with '--experimental-modules'
 
