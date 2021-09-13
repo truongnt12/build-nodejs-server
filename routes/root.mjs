@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { rootControllers } from "../controllers";
+import { rootControllers } from "../controllers/index.mjs";
 
 const rootRouter = Router();
 

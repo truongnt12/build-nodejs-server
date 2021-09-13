@@ -2,9 +2,13 @@
   "name": "build-nodejs-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "type": "module",
+  "main": "server.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node --experimental-modules server.mjs",
+    "debug": "DEBUG=* node ./server.mjs",
+    "dev": "node ./node_modules/nodemon/bin/nodemon.js ./server.mjs",
+    "test": "mocha ./test/*"
   },
   "repository": {
     "type": "git",
@@ -26,6 +30,7 @@
   },
   "devDependencies": {
     "mocha": "^9.1.1",
+    "nodemon": "^2.0.12",
     "supertest": "^6.1.6"
   }
 }
