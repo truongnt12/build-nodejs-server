@@ -5,10 +5,14 @@
   "type": "module",
   "main": "server.mjs",
   "scripts": {
-    "start": "node --experimental-modules server.mjs",
+    "start8": "node --experimental-modules server.mjs",
+    "start": "pm2-runtime start ecosystem.config.mjs --env production",
     "debug": "DEBUG=* node ./server.mjs",
     "dev": "node ./node_modules/nodemon/bin/nodemon.js ./server.mjs",
-    "test": "mocha ./test/*"
+    "test": "mocha ./test/*",
+    "docker:build": "sudo docker build . -t",
+    "heroku:push": "sudo heroku container:push",
+    "heroku:release": "sudo heroku container:release"
   },
   "repository": {
     "type": "git",
@@ -26,7 +30,8 @@
     "esm": "^3.2.25",
     "express": "^4.17.1",
     "express-basic-auth": "^1.2.0",
-    "helmet": "^4.6.0"
+    "helmet": "^4.6.0",
+    "pm2": "^5.1.1"
   },
   "devDependencies": {
     "mocha": "^9.1.1",
