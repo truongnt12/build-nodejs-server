@@ -1,4 +1,4 @@
-import defaultMiddleware from "./default.mjs";
+import defaultMiddleware from "./default";
 
 // register all middleware
 export default function registerMiddlewares(server){

@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { rootControllers } from "../controllers/index.mjs";
-import { AsyncWrapper } from "../utils/asyncWrapper.mjs";
+import { rootControllers } from "../controllers";
+import { AsyncWrapper } from "../utils/asyncWrapper";
 const rootRouter = Router();
 
 // GET /v1/

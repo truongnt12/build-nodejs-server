@@ -1,6 +1,6 @@
 import request from "supertest";
 import express from "express";
-import { rootRouter } from "../routes/index.mjs";
+import { rootRouter } from "../routes";
 
 const server = express();
 

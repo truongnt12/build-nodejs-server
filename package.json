@@ -2,17 +2,21 @@
   "name": "build-nodejs-server",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
-  "main": "server.mjs",
+  "main": "index.js",
   "scripts": {
-    "start8": "node --experimental-modules server.mjs",
-    "start": "pm2-runtime start ecosystem.config.mjs --env production",
-    "debug": "DEBUG=* node ./server.mjs",
-    "dev": "node ./node_modules/nodemon/bin/nodemon.js ./server.mjs",
+    "start8": "node -r esm .",
+    "start": "pm2-runtime start ecosystem.config.js --env production",
+    "debug": "DEBUG=* node -r esm .",
+    "dev": "node ./node_modules/nodemon/bin/nodemon.js .",
     "test": "mocha ./test/*",
     "docker:build": "sudo docker build . -t",
     "heroku:push": "sudo heroku container:push",
     "heroku:release": "sudo heroku container:release"
+  },
+  "mocha": {
+    "require": [
+      "esm"
+    ]
   },
   "repository": {
     "type": "git",
