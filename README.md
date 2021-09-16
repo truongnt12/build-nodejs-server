@@ -12,7 +12,7 @@
 
 ## Deploy app to heroku with PM2
 
-> npm install pm2@latest -g
-> heroku login
-> heroku create
-> git push heroku master
+- npm install pm2@latest -g
+- heroku login
+- heroku create
+- git push heroku master
